@@ -5,15 +5,13 @@ class App extends React.Component{
     count : 0
   };
   add=() =>{
-    console.log("add");
     // this.setState({count: this.state.count+1}) 외부에 의존
     this.setState(current => ({count: current.count+1})); 
     //function을 씀으로써 의존X
 
   };
   minus=() =>{
-    console.log("minus");
-    this.setState(current => {count:current.count-1}));
+    this.setState(current => ({count:current.count-1}));
   };
   render(){
     return (
