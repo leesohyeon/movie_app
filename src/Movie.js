@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Movie.css";
-import { generateKeyPairSync } from "crypto";
 
 function Movie({ id, year, title, summary, poster ,genres}) {
   return (
@@ -15,7 +14,7 @@ function Movie({ id, year, title, summary, poster ,genres}) {
         (<li className="genres_genre">{genre}</li>
         ))}
         </ul>
-        <p className="movie_summary">{summary}</p>
+        <p className="movie_summary">{summary.slice(0,140)}...</p>
       </div>
     </div>
   );
